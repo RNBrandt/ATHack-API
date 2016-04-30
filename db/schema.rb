@@ -11,15 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430181127) do
+ActiveRecord::Schema.define(version: 20160430212448) do
 
-  create_table "education_supports", force: :cascade do |t|
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "ages", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age_1"
+    t.integer  "age_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genders", force: :cascade do |t|
+    t.string   "name"
     t.boolean  "male",         default: false
     t.boolean  "female",       default: false
     t.boolean  "trans_male",   default: false
@@ -29,9 +32,30 @@ ActiveRecord::Schema.define(version: 20160430181127) do
   end
 
   create_table "languages", force: :cascade do |t|
-    t.string   "language"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.boolean  "english",    default: true
+    t.boolean  "spanish",    default: false
+    t.boolean  "cantonese",  default: false
+    t.boolean  "chiuchow",   default: false
+    t.boolean  "fukinese",   default: false
+    t.boolean  "hindi",      default: false
+    t.boolean  "ilocano",    default: false
+    t.boolean  "japanese",   default: false
+    t.boolean  "korean",     default: false
+    t.boolean  "mandarin",   default: false
+    t.boolean  "tagalong",   default: false
+    t.boolean  "taiwanese",  default: false
+    t.boolean  "urdu",       default: false
+    t.boolean  "vietnamese", default: false
+    t.boolean  "arabic",     default: false
+    t.boolean  "french",     default: false
+    t.boolean  "indonesian", default: false
+    t.boolean  "mien",       default: false
+    t.boolean  "portuguese", default: false
+    t.boolean  "russian",    default: false
+    t.boolean  "thai",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -43,23 +67,37 @@ ActiveRecord::Schema.define(version: 20160430181127) do
     t.string   "email"
     t.text     "description"
     t.integer  "gender_id"
-    t.integer  "age_served"
+    t.integer  "age_id"
     t.integer  "language_id"
     t.string   "service_hour"
     t.string   "fee"
-    t.integer  "education_support_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "provided_service_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "phone_numbers", force: :cascade do |t|
-    t.integer  "phone_numbers"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "name"
+    t.string   "main_number"
+    t.string   "secondary_number"
+    t.string   "emergency_number"
+    t.string   "fax_number"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "provided_services", force: :cascade do |t|
-    t.text "description"
+    t.string   "name"
+    t.boolean  "support_system", default: false
+    t.boolean  "housing",        default: false
+    t.boolean  "education",      default: false
+    t.boolean  "employment",     default: false
+    t.boolean  "legal",          default: false
+    t.boolean  "language",       default: false
+    t.boolean  "health",         default: false
+    t.boolean  "lgbtq",          default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end
