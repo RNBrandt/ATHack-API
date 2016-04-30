@@ -23,6 +23,7 @@ class CreateLanguages < ActiveRecord::Migration
       t.boolean :portuguese, default: false
       t.boolean :russian, default: false
       t.boolean :thai, default: false
+      t.boolean :hebrew, default: false
 
       t.timestamps(null: false)
     end

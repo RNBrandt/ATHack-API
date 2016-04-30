@@ -11,6 +11,6 @@ ProvidedService.create(name: "Asian Pacific Islander Legal Outreach SF", legal: 
 Language.create(name: "Asian Pacific Islander Legal Outreach SF", cantonese: true, chiuchow: true, fukinese: true, hindi: true, ilocano: true, japanese: true, korean: true, mandarin: true, spanish: true, tagalong: true, taiwanese: true, urdu: true, vietnamese: true)
 Gender.create(name: "Asian Pacific Islander Legal Outreach SF", male: true, female: true, trans_male: true, trans_female: true)
 PhoneNumber.create(name: "Asian Pacific Islander Legal Outreach SF", main_number: "(415)567-6255", fax_number: "(415)567-6248")
-Age.create(name: "Asian Pacific Islander Legal Outreach SF", age_1: 100)
+Age.create(name: "Asian Pacific Islander Legal Outreach SF", maximum_age: 100)
 
 
