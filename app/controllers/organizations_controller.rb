@@ -22,14 +22,14 @@ class OrganizationsController < ActionController::API
         :name,
         :address,
         :website,
-        :phone_number_id,
+        :phone_number,
         :email,
         :description,
-        :gender_id,
-        :age_id,
-        :language_id,
+        :gender,
+        :age,
+        :language,
         :service_hour,
         :fee,
-        :provided_service_id)
+        :provided_service)
   end
 end
