@@ -30,6 +30,8 @@ class CreateLanguages < ActiveRecord::Migration
       t.boolean :macedonian, default: false
       t.boolean :serbocroat, default: false
       t.boolean :taishanese, default: false
+      t.boolean :ukrainian, default: false
+      t.boolean :hatiancreole, default: false
 
       t.timestamps(null: false)
     end

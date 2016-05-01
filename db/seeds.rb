@@ -88,6 +88,34 @@ PhoneNumber.create(organization_id: 6, main_number: "(415) 885 6543")
 Age.create(organization_id: 6, minimum_age: 2)
 
 # copy this format for each
+Organization.create(name:"Catholic Charities",
+ address: "180 Howard Street San Francisco, CA 94105",
+ email: "igoldenshteyn@cccyo.org",
+ description: "Through Catholic Charities’ leadership, reputation, advocacy, and commitment, the organization guides clients toward increased civic participation and control of their lives and futures.",
+ website: "www.cccyo.org",
+ service_hour: "Monday-Friday, 9:00 am – 5:00 pm ",
+ fee: "There are no fees for clients, but fees do vary for technical assistance/training")
+ProvidedService.create(organization_id: 7, support_system: true, language: true, employment:true)
+Language.create(organization_id: 7, cantonese: true, mandarin: true, russian: true, spanish: true, thai: true, ukrainian: true, vietnamese: true)
+Gender.create(organization_id: 7, male: true, female: true)
+PhoneNumber.create(organization_id: 7, main_number: "(415) 972-1309")
+Age.create(organization_id: 7, minimum_age: 18)
+
+# copy this format for each
+Organization.create(name:"Center for Gender and Refugee Studies",
+ address: "1200 McAllister Street San Francisco, CA 94102",
+ email: "cgrs@uchastings.edu",
+ description: "The Center for Gender & Refugee Studies (CGRS) protects the fundamental human rights of women, children, LGBT, and other refugees who flee persecution. We provide cutting edge legal expertise and training, policy development, research, and in-country fact-finding and use international human rights instruments to address the root causes of persecution.",
+ website: "www.cgrs.uchastings.edu",
+ service_hour: "Monday-Friday, 9:00 am – 5:00 pm ",
+ fee: "None")
+ProvidedService.create(organization_id: 8, support_system: true)
+Language.create(organization_id: 8, spanish: true, hatiancreole: true)
+Gender.create(organization_id: 8, male: false, female: true, trans_female: true, trans_male: true)
+PhoneNumber.create(organization_id: 8, main_number: "(415) 565-4877", fax_number: "(415) 581-8824")
+Age.create(organization_id: 8, maximum_age: 100)
+
+# copy this format for each
 Organization.create(name:"Victim Services Division: SF District Attorney",
  org_type: "Service Provider",
  address: "850 Bryant Street #320 San Francisco, CA 94103",
