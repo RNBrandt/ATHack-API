@@ -23,88 +23,45 @@ ActiveRecord::Schema.define(version: 20160430212448) do
 
   create_table "genders", force: :cascade do |t|
     t.integer  "organization_id"
-    t.boolean  "male",            default: false
-    t.boolean  "female",          default: false
-    t.boolean  "trans_male",      default: false
-    t.boolean  "trans_female",    default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "gender"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "languages", force: :cascade do |t|
     t.integer  "organization_id"
-    t.boolean  "english",         default: true
-    t.boolean  "spanish",         default: false
-    t.boolean  "cantonese",       default: false
-    t.boolean  "chiuchow",        default: false
-    t.boolean  "fukinese",        default: false
-    t.boolean  "hindi",           default: false
-    t.boolean  "ilocano",         default: false
-    t.boolean  "japanese",        default: false
-    t.boolean  "korean",          default: false
-    t.boolean  "mandarin",        default: false
-    t.boolean  "tagalong",        default: false
-    t.boolean  "taiwanese",       default: false
-    t.boolean  "urdu",            default: false
-    t.boolean  "vietnamese",      default: false
-    t.boolean  "arabic",          default: false
-    t.boolean  "french",          default: false
-    t.boolean  "indonesian",      default: false
-    t.boolean  "mien",            default: false
-    t.boolean  "portuguese",      default: false
-    t.boolean  "russian",         default: false
-    t.boolean  "thai",            default: false
-    t.boolean  "farsi",           default: false
-    t.boolean  "german",          default: false
-    t.boolean  "hebrew",          default: false
-    t.boolean  "italian",         default: false
-    t.boolean  "macedonian",      default: false
-    t.boolean  "serbocroat",      default: false
-    t.boolean  "taishanese",      default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "language"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "organizations", force: :cascade do |t|
     t.string   "org_type"
-    t.string   "name"
-    t.string   "address"
     t.string   "website"
-    t.integer  "phone_number_id"
+    t.string   "name"
     t.string   "email"
     t.text     "description"
-    t.integer  "gender_id"
-    t.integer  "age_id"
-    t.integer  "language_id"
     t.string   "service_hour"
     t.string   "fee"
-    t.integer  "provided_service_id"
+    t.string   "education_resources"
+    t.string   "address"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
 
   create_table "phone_numbers", force: :cascade do |t|
     t.integer  "organization_id"
-    t.string   "main_number"
-    t.string   "secondary_number"
-    t.string   "emergency_number"
-    t.string   "fax_number"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "description"
+    t.string   "number"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "provided_services", force: :cascade do |t|
     t.integer  "organization_id"
-    t.boolean  "support_system",  default: false
-    t.boolean  "housing",         default: false
-    t.boolean  "education",       default: false
-    t.boolean  "employment",      default: false
-    t.boolean  "legal",           default: false
-    t.boolean  "language",        default: false
-    t.boolean  "health",          default: false
-    t.boolean  "lgbtq",           default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "service_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
