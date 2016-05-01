@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'rails-api'
 gem 'spring', :group => :development
-gem 'active_model_serializers'
+gem "active_model_serializers", github: "rails-api/active_model_serializers"
 
 group :test, :development do
     gem 'sqlite3'
