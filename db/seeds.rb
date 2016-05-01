@@ -1,5 +1,34 @@
+# english = Language.create(name: "English")
+# spanish = Language.create(name: "Spanish")
+# cantonese = Language.create(name: "Cantonese")
+# chiuchow = Language.create(name: "Chiuchow")
+# fukinese = Language.create(name: "Fukinese")
+# hindi = Language.create(name: "Hindi")
+# ilocano = Language.create(name: "Ilocano")
+# japanese = Language.create(name: "Japanese")
+# korean = Language.create(name: "Korean")
+# mandarin = Language.create(name: "Mandarin")
+# tagalong = Language.create(name: "Tagalong")
+# taiwanese = Language.create(name: "Taiwanese")
+# urdu = Language.create(name: "Urdu")
+# vietnamese = Language.create(name: "Vietnamese")
+# arabic = Language.create(name: "Arabic")
+# french = Language.create(name: "French")
+# indonesian = Language.create(name: "Indonesian")
+# mien = Language.create(name: "Mien")
+# portuguese = Language.create(name: "Portuguese")
+# russian = Language.create(name: "Russian")
+# thai = Language.create(name: "Thai")
+# farsi = Language.create(name: "Farsi")
+# german = Language.create(name: "German")
+# hebrew = Language.create(name: "Hebrew")
+# italian = Language.create(name: "Italian")
+# macedonian = Language.create(name: "Macedonian")
+# serbocroat = Language.create(name: "Serbocroat")
+# taishanese = Language.create(name: "Taishanese")
+
 # copy this format for each
-Organization.create(name:"Asian Pacific Islander Legal Outreach SF",
+organization = Organization.create(name:"Asian Pacific Islander Legal Outreach SF",
  org_type: "Service Provider",
  address: "1121 Mission Street San Francisco, CA 94103",
  email: "lprice@apilegaloutreach.org",
@@ -15,7 +44,7 @@ Age.create(organization_id: 1, maximum_age: 100)
 
 
 # copy this format for each
-Organization.create(name:"Asian Pacific Islander Legal Outreach Oakland",
+organization = Organization.create(name:"Asian Pacific Islander Legal Outreach Oakland",
  org_type: "Service Provider",
  address: "1305 Franklin Street, Suite 410 Oakland, CA 94612",
  email: "knguyen@apilegaloutreach.org",
@@ -30,7 +59,7 @@ PhoneNumber.create(organization_id: 2, main_number: "(510) 251-2846", fax_number
 Age.create(organization_id: 2, maximum_age: 100)
 
 # copy this format for each
-Organization.create(name:"Bay Area Women Against Rape (BAWAR)",
+organization = Organization.create(name:"Bay Area Women Against Rape (BAWAR)",
  org_type: "Service Provider",
  address: "470 27th St. Oakland, CA 94612",
  email: "sem@bawar.org",
@@ -44,7 +73,7 @@ Gender.create(organization_id: 3, male: true, female: true, trans_male: true, tr
 PhoneNumber.create(organization_id: 3, main_number: "(510) 430-1298 x30", fax_number: "(510) 430-2579")
 Age.create(organization_id: 3, maximum_age: 100)
 
-Organization.create(name:"Asian Women's Shelter",
+organization = Organization.create(name:"Asian Women's Shelter",
  org_type: "Service Provider",
  address: "3543 18th Street, #19 San Francisco, CA 94110",
  email: "hediana@sfaws.org",
@@ -60,7 +89,7 @@ PhoneNumber.create(organization_id: 4, main_number: "(415) 751-7110 ext. 301", f
 Age.create(organization_id: 4, maximum_age: 100)
 
 # copy this format for each
-Organization.create(name:"Bay Area Sex Worker Advocacy Network (BAYSWAN)",
+organization = Organization.create(name:"Bay Area Sex Worker Advocacy Network (BAYSWAN)",
  address: "PO Box 210256 San Francisco, CA 94121 ",
  email: "info@bayswan.org",
  description: "BAYSWAN (Bay Area Sex Worker Advocacy Network) advocates for the rights of sex workers, providing referrals and support.  Specifically, BAYSWAN networks with human rights activists to address the violations of rights of sex workers, victims of trafficking, and others who seek support in interactions with authorities in the context of anti-trafficking investigations, enforcement, Immigration and Customs Enforcement raids, and deportations.  BAYSWAN also addresses labor violations in the context of commercial sex and supports human, civil, and labor rights for sex workers and migrant workers.  In conjunction with BAYSWAN, the Trafficking Policy Research Project collects and presents research and commentary regarding the effects of the United States’ and international trafficking laws and policies.  The Project provides an outline of alternative analyses and strategies for the global problems of trafficking and forced labor, prioritizing welfare of sex workers in the context of migrant labor.   ",
@@ -74,7 +103,7 @@ PhoneNumber.create(organization_id: 5, main_number: "(415) 751-1659")
 Age.create(organization_id: 5, minimum_age: 18)
 
 # copy this format for each
-Organization.create(name:"Because Justice Matters",
+organization = Organization.create(name:"Because Justice Matters",
  address: "357 Ellis Street San Francisco, CA 94102",
  email: "info@becausejusticematters.org",
  description: "To reach women who are victims of sexual exploitation and domestic violence, and offer support to those experiencing isolation due to economic and cultural challenges. Because Justice Matters operates a center for women and girls, providing after-care, support and mentoring. NOTE: DOES NOT SERVE WOMEN BETWEEN THE AGES OF 15 and 18",
@@ -88,7 +117,7 @@ PhoneNumber.create(organization_id: 6, main_number: "(415) 885 6543")
 Age.create(organization_id: 6, minimum_age: 2)
 
 # copy this format for each
-Organization.create(name:"Victim Services Division: SF District Attorney",
+organization = Organization.create(name:"Victim Services Division: SF District Attorney",
  org_type: "Service Provider",
  address: "850 Bryant Street #320 San Francisco, CA 94103",
  email: "victimservices@sfgov.org",
@@ -103,7 +132,7 @@ PhoneNumber.create(organization_id: 36, main_number: "(415)553-9044", fax_number
 Age.create(organization_id: 36, maximum_age: 100)
 
 # copy this format for each
-Organization.create(name:"WestCoast Children’s Clinic C-Change Program",
+organization = Organization.create(name:"WestCoast Children’s Clinic C-Change Program",
  org_type: "Service Provider",
  address: "3301 E 12th St #259 Oakland, CA 94601",
  email: "jlangs@westcoastcc.org",
@@ -116,4 +145,3 @@ Language.create(organization_id: 37, spanish: true)
 Gender.create(organization_id: 37, male: true, female: true, trans_male: false, trans_female: false)
 PhoneNumber.create(organization_id: 37, main_number: "(510)269-9030", fax_number: "(510)269-9031")
 Age.create(organization_id: 37, minimum_age: 10, maximum_age: 21)
-
