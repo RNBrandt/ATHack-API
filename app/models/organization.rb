@@ -3,4 +3,5 @@ class Organization < ActiveRecord::Base
   has_many :genders
   has_many :phone_numbers
   has_many :provided_services
+  has_many :ages
 end
