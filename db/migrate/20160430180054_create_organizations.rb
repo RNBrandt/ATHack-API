@@ -9,11 +9,11 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :email
       t.text :description
       t.integer :gender_id
-      t.integer :age_served
+      t.integer :age_id
       t.integer :language_id
       t.string :service_hour
       t.string :fee
-      t.integer :education_support_id
+      t.integer :provided_service_id
 
       t.timestamps(null: false)
     end
