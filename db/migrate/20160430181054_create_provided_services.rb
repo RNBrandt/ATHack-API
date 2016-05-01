@@ -1,7 +1,7 @@
 class CreateProvidedServices < ActiveRecord::Migration
   def change
     create_table :provided_services do |t|
-      t.string :name
+      t.integer :organization_id
       t.boolean :support_system, default: false
       t.boolean :housing, default: false
       t.boolean :education, default: false

@@ -1,7 +1,7 @@
 class CreateLanguages < ActiveRecord::Migration
   def change
     create_table :languages do |t|
-      t.string :name
+      t.integer :organization_id
       t.boolean :english, default: true
       t.boolean :spanish, default: false
       t.boolean :cantonese, default: false
