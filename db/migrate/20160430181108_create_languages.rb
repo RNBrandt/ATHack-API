@@ -5,7 +5,7 @@ class CreateLanguages < ActiveRecord::Migration
       t.boolean :english, default: true
       t.boolean :spanish, default: false
       t.boolean :cantonese, default: false
-      t.boolean :chiuchow,default: false
+      t.boolean :chiu_chow,default: false
       t.boolean :fukinese, default: false
       t.boolean :hindi, default: false
       t.boolean :ilocano, default: false
@@ -28,10 +28,10 @@ class CreateLanguages < ActiveRecord::Migration
       t.boolean :hebrew, default: false
       t.boolean :italian, default: false
       t.boolean :macedonian, default: false
-      t.boolean :serbocroat, default: false
+      t.boolean :serbo_croat, default: false
       t.boolean :taishanese, default: false
       t.boolean :ukrainian, default: false
-      t.boolean :hatiancreole, default: false
+      t.boolean :hatian_creole, default: false
 
       t.timestamps(null: false)
     end

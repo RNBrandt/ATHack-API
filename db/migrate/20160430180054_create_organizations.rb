@@ -3,17 +3,11 @@ class CreateOrganizations < ActiveRecord::Migration
     create_table :organizations do |t|
       t.string :org_type
       t.string :name
-      t.string :address
-      t.string :website
-      t.integer :phone_number_id
       t.string :email
       t.text :description
-      t.integer :gender_id
-      t.integer :age_id
-      t.integer :language_id
       t.string :service_hour
       t.string :fee
-      t.integer :provided_service_id
+      t.string :education_resouce
 
       t.timestamps(null: false)
     end
