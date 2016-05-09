@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160430212448) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ages", force: :cascade do |t|
     t.integer  "organization_id"
     t.integer  "minimum_age"
