@@ -1,10 +1,5 @@
 class OrganizationsController < ActionController::API
     def index
-        organization_filter = organization_params
-        organization_filter
-
-        # where min_age < age < max_age
-
         if params.empty?
             @organizations = Organization.all
         else
@@ -30,6 +25,6 @@ class OrganizationsController < ActionController::API
         :language,
         :service_hour,
         :fee,
-        :provided_service)
+        {languages: :language})
   end
 end
