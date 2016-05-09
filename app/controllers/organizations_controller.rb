@@ -24,7 +24,6 @@ class OrganizationsController < ActionController::API
         :age,
         :language,
         :service_hour,
-        :fee,
-        {languages: :language})
+        :fee)
   end
 end
