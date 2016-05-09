@@ -22,7 +22,7 @@ class OrganizationsController < ActionController::API
         :description,
         :gender,
         :age,
-        :language,
+        :languages,
         :service_hour,
         :fee)
   end
