@@ -5,3 +5,4 @@ class Organization < ActiveRecord::Base
   has_many :provided_services
   has_one   :age
 end
+# all params downcase
