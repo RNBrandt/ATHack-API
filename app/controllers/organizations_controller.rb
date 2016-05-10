@@ -1,12 +1,12 @@
 class OrganizationsController < ActionController::API
     def index
-        if params.empty?
+        if organization_params.empty?
             @organizations = Organization.all
         else
-            @organzations = Organization.where(organization_params)
+            @organizations = Organization.where(organization_params)
         end
 
-        render json: @organzations
+        render json: @organizations
     end
 
     private
@@ -16,10 +16,6 @@ class OrganizationsController < ActionController::API
         :org_type,
         :name,
         :address,
-        :website,
-        :phone_number,
-        :email,
-        :description,
         :gender,
         :age,
         :languages,
