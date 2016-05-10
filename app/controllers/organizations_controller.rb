@@ -5,7 +5,6 @@ class OrganizationsController < ActionController::API
         else
             @organzations = Organization.where(organization_params)
         end
-
         render json: @organzations
     end
 
