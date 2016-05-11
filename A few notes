@@ -1,0 +1,6 @@
+everything to downcase
+languages = array
+provided services = array
+gender = array
+age = hash{minimum_age: 3443, maximum_age: 3443}
+phone_number = hash {main: 232, fax: 3434, emergency: 2443}
