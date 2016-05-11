@@ -1,6 +1,11 @@
 everything to downcase
-languages = array
-provided services = array
-gender = array
-age = hash{minimum_age: 3443, maximum_age: 3443}
-phone_number = hash {main: 232, fax: 3434, emergency: 2443}
+languages = array with only one language per object
+provided services = array with only one service per object
+gender = array with only one gender per object
+age = hash ex{minimum_age: 3443, maximum_age: 3443}
+phone_number = hash ex {main: 232, fax: 3434, emergency: 2443}
+
+
+Looking at the data, I think we may need to create a separate object for the fee info. Initially... well you can see what I thought initially, but I think we can break it into a few categories: No Fee, Sliding Scale, and Paid Services.
+
+Similarly, I'm a bit concerned about how to do the 'provided services'.  If need be it doesn't have to be fully searchable, but I think we should try to get each of the provided services into one of the categories we had earlier. I bet if we both thought about it we could come up with some algorithmic solution, but It'll defintiely be tricky.
