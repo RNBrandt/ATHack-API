@@ -1,12 +1,16 @@
+#To do: 1) Create logic for ages
+#2) make sure multiple queries are properly filtered
+
 class OrganizationsController < ActionController::API
     def index
         p params
-        test = params[:fee]
+        @organizations = []
         if  params[:languages]
-            @organizations = Organization.all
-            p "#{params}"
+            @organizations =  get_provider_from_language(params[:languages])
         elsif params[:genders]
             @organizations = get_provider_from_gender(params[:genders])
+        elsif params[:phone_numbers]
+            @organizations = get_provider_from_phone_number(params[:phone_numbers])
         else
             puts " asdfasdff #{organization_params}"
             @organizations = Organization.where(organization_params)
@@ -21,7 +25,7 @@ class OrganizationsController < ActionController::API
         :name,#works
         :address,
         :website,
-        :phone_number,#created object, not searchable
+        :phone_numbers,#created object, not searchable
         :email,
         :description,
         :genders,
@@ -38,14 +42,11 @@ def get_provider_from_phone_number(input_number)
 end
 
 def get_provider_from_gender(input_gender)
-    p input_gender
     Organization.joins(:genders).where(:genders =>{gender: input_gender})
 end
 
-
-
-# def get_provider_from_age(input_age)
-#     Organization.joins(:ages).where((:ages =>{:minimum_age <= input_age}) && (:ages =>{:maximum_age >= input_age}))
-# end
+def get_provider_from_language(input_language)
+     Organization.joins(:languages).where(:languages =>{language: input_language})
+end
 
 
