@@ -3,18 +3,16 @@
 
 class OrganizationsController < ActionController::API
     def index
-        p params
-        @organizations = []
-        if  params[:languages]
-            @organizations =  get_provider_from_language(params[:languages])
-        elsif params[:genders]
-            @organizations = get_provider_from_gender(params[:genders])
-        elsif params[:phone_numbers]
-            @organizations = get_provider_from_phone_number(params[:phone_numbers])
-        else
-            puts " asdfasdff #{organization_params}"
-            @organizations = Organization.where(organization_params)
-        end
+        # if  params[:languages]
+        #     @organizations =  get_provider_from_language(params[:languages])
+        # elsif params[:genders]
+        #     @organizations = get_provider_from_gender(params[:genders])
+        # elsif params[:phone_numbers]
+        #     @organizations = get_provider_from_phone_number(params[:phone_numbers])
+        # else
+        #     puts " asdfasdff #{organization_params}"
+        # end
+        @organizations = Organization.joins(:phone_numbers,:genders,:languages).where(organization_params)
         render json: @organizations
     end
     private
