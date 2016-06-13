@@ -1,6 +1,7 @@
 class OrganizationSerializer < ActiveModel::Serializer
   attributes :org_type, :name, :address, :website, :email, :description, :fee, :languages, :genders, :provided_services
   has_one  :age, class_name: "Age"
+  has_one  :phone_numbers, class_name: "number"
   delegate :cache_key, to: :object
 
   def languages
